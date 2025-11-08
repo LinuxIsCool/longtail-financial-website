@@ -24,7 +24,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden bg-gray-100">
                 <Image
-                  src="/tech-ceo-headshot.png"
+                  src="/headshot.jpg"
                   alt="Shawn Anderson"
                   width={400}
                   height={400}
