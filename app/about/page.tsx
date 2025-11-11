@@ -107,55 +107,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Key Achievements */}
-      <section className="px-6 py-16 bg-gray-50">
-        <div className="max-w-5xl mx-auto">
-          <h3 className="text-3xl font-bold text-gray-900 mb-12 text-center">Key Achievements & Expertise</h3>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-xl border border-gray-200">
-              <h4 className="text-lg font-bold text-gray-900 mb-3">Research & Innovation</h4>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Token engineering frameworks for on-chain intelligent agents</li>
-                <li>• Deep reinforcement learning for portfolio management</li>
-                <li>• Cryptocurrency market visualization and forecasting</li>
-                <li>• Evolution strategies in financial machine learning</li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-6 rounded-xl border border-gray-200">
-              <h4 className="text-lg font-bold text-gray-900 mb-3">Industry Experience</h4>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Data Scientist at RBC Amplify (Award-winning solutions)</li>
-                <li>• Blockchain and cryptocurrency markets expert</li>
-                <li>• AI and machine learning systems architecture</li>
-                <li>• Distributed systems and cloud computing</li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-6 rounded-xl border border-gray-200">
-              <h4 className="text-lg font-bold text-gray-900 mb-3">Speaking & Media</h4>
-              <ul className="space-y-2 text-gray-700">
-                <li>• AIBC Summit Malta 2019 - "The Rise of The New World"</li>
-                <li>• Blockgeeks Workshop on AI in Crypto Markets</li>
-                <li>• Economics of Wellbeing Podcast</li>
-                <li>• Bloom Living Podcast on Decentralized Banking</li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-6 rounded-xl border border-gray-200">
-              <h4 className="text-lg font-bold text-gray-900 mb-3">Thought Leadership</h4>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Author on Nature 2.0 and token engineering</li>
-                <li>• Solarpunk and regenerative land management</li>
-                <li>• DAOs and future of human collaboration</li>
-                <li>• ReFi (Regenerative Finance) education and advocacy</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="px-6 py-20">
         <div className="max-w-3xl mx-auto text-center">
