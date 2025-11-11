@@ -2,14 +2,18 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Linkedin, Github, Mail } from "lucide-react"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <>
+      <Header />
+      <main className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative px-6 pt-24 pb-16 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 text-balance">About Long Tail Financial</h1>
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 text-balance">About Longtail Financial</h1>
           <p className="text-xl text-gray-600 text-pretty">
             Building the future of tokenomics and regenerative finance through innovative engineering and research
           </p>
@@ -60,7 +64,7 @@ export default function AboutPage() {
 
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  Shawn Anderson is the CEO and Founder of Long Tail Financial, a token engineering consultancy
+                  Shawn Anderson is the CEO and Founder of Longtail Financial, a token engineering consultancy
                   dedicated to designing sustainable tokenomics and regenerative financial systems.
                 </p>
 
@@ -85,7 +89,7 @@ export default function AboutPage() {
                 </p>
 
                 <p>
-                  Through Long Tail Financial, Shawn works with projects to design intelligent agent behavior on-chain,
+                  Through Longtail Financial, Shawn works with projects to design intelligent agent behavior on-chain,
                   create sustainable tokenomics models, and build the infrastructure for a more equitable and
                   regenerative financial future.
                 </p>
@@ -168,5 +172,7 @@ export default function AboutPage() {
         </div>
       </section>
     </main>
+    <Footer />
+    </>
   )
 }

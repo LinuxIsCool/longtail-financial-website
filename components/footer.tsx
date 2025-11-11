@@ -7,7 +7,7 @@ export function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">Long Tail Financial</h3>
+            <h3 className="text-xl font-bold mb-4">Longtail Financial</h3>
             <p className="text-gray-400">
               Token engineering consultancy helping organizations design and deploy tokenomic systems.
             </p>
@@ -61,7 +61,7 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
-          © {new Date().getFullYear()} Long Tail Financial. All rights reserved.
+          © {new Date().getFullYear()} Longtail Financial. All rights reserved.
         </div>
       </div>
     </footer>
