@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { FileText, Atom, Rocket } from "lucide-react"
+import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
@@ -31,91 +31,272 @@ export default function Home() {
 
       {/* What We Do Section */}
       <section className="px-6 py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12">What We Do</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center">What We Do</h2>
+          <p className="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
+            Comprehensive token engineering and blockchain advisory services to design, validate, and deploy sustainable crypto-economic systems
+          </p>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* Card 1 */}
-            <Card className="bg-white border-none shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-8">
-                <div className="bg-orange-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 relative">
-                  <FileText className="w-8 h-8 text-white" />
-                  <div className="absolute -top-1 -right-1 bg-black text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">
-                    1
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Research, Collect and Analyze Data</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Our data scientists extend the AI capacity of the client, researching and collecting data from open
-                  markets and variable input which are understood through general token engineering dashboard tools.
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {/* Data Collection and Analysis */}
+            <Card className="bg-white border-none shadow-sm hover:shadow-lg transition-all group overflow-hidden">
+              <div className="relative w-full h-48 bg-gray-100 overflow-hidden">
+                <Image
+                  src="/Offerings/data_collection.png"
+                  alt="Data Collection and Analysis"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                  Data Collection & Analysis
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  Research and collect data from open markets and variable inputs, analyzed through specialized token engineering tools.
                 </p>
               </CardContent>
             </Card>
 
-            {/* Card 2 */}
-            <Card className="bg-white border-none shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-8">
-                <div className="bg-orange-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 relative">
-                  <Atom className="w-8 h-8 text-white" />
-                  <div className="absolute -top-1 -right-1 bg-black text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">
-                    2
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Design, Simulate and Model Systems</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  To fully understand and make optimizations to the token system, we build simulations and models to
-                  inform strategic decision making and confirm hypotheses.
+            {/* Interactive Data Dashboards */}
+            <Card className="bg-white border-none shadow-sm hover:shadow-lg transition-all group overflow-hidden">
+              <div className="relative w-full h-48 bg-gray-100 overflow-hidden">
+                <Image
+                  src="/Offerings/interactive_data_dashboards.png"
+                  alt="Interactive Data Dashboards"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                  Interactive Data Dashboards
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  Real-time visualization and monitoring tools for tracking tokenomic metrics and system performance.
                 </p>
               </CardContent>
             </Card>
 
-            {/* Card 3 */}
-            <Card className="bg-white border-none shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-8">
-                <div className="bg-orange-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 relative">
-                  <Rocket className="w-8 h-8 text-white" />
-                  <div className="absolute -top-1 -right-1 bg-black text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">
-                    3
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Optimize and Deploy Tokenomic System</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Once fully understood and optimized, we advise on platform development, market presence, NFT
-                  implementation, token configuration, as well as ecosystem and mechanism design.
+            {/* Token Engineering Methodology */}
+            <Card className="bg-white border-none shadow-sm hover:shadow-lg transition-all group overflow-hidden">
+              <div className="relative w-full h-48 bg-gray-100 overflow-hidden">
+                <Image
+                  src="/Offerings/token_engineering_methodology.png"
+                  alt="Token Engineering Methodology"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                  Token Engineering Methodology
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  Systematic design frameworks integrating mechanism design, game theory, and complex systems engineering.
                 </p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
 
-      {/* Case Study Section */}
-      <section className="px-6 py-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <img
-                src="/futuristic-nft-drop-poster-with-green-and-teal-tec.jpg"
-                alt="Future Thinkers NFT Drop"
-                className="rounded-3xl shadow-2xl w-full"
-              />
-            </div>
+            {/* Component Validation Testing */}
+            <Card className="bg-white border-none shadow-sm hover:shadow-lg transition-all group overflow-hidden">
+              <div className="relative w-full h-48 bg-gray-100 overflow-hidden">
+                <Image
+                  src="/Offerings/component_validation.png"
+                  alt="Component Validation Testing"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                  Component Validation & Parameter Tuning
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  Rigorous testing and optimization of tokenomic components through simulation and sensitivity analysis.
+                </p>
+              </CardContent>
+            </Card>
 
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 text-balance">
-                Over $800,000 raised with Future Thinkers Podcast
-              </h2>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                We provide services across all stages of the token model generation processes. Check out this project!
-              </p>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white px-8 py-6 text-lg rounded-full bg-transparent"
-              >
-                View Case Study
-              </Button>
-            </div>
+            {/* Governance Advisory */}
+            <Card className="bg-white border-none shadow-sm hover:shadow-lg transition-all group overflow-hidden">
+              <div className="relative w-full h-48 bg-gray-100 overflow-hidden">
+                <Image
+                  src="/Offerings/governance.png"
+                  alt="Governance Advisory"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                  Governance Advisory
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  Design and implementation of decentralized governance mechanisms, voting systems, and DAO structures.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* NFT Campaign Advisory */}
+            <Card className="bg-white border-none shadow-sm hover:shadow-lg transition-all group overflow-hidden">
+              <div className="relative w-full h-48 bg-gray-100 overflow-hidden">
+                <Image
+                  src="/Offerings/nft.png"
+                  alt="NFT Campaign Advisory"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                  NFT Campaign Advisory
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  Strategic planning and execution for NFT launches, collection design, and community-driven campaigns.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Token Launch Advisory */}
+            <Card className="bg-white border-none shadow-sm hover:shadow-lg transition-all group overflow-hidden">
+              <div className="relative w-full h-48 bg-gray-100 overflow-hidden">
+                <Image
+                  src="/Offerings/token_launch_advisory.png"
+                  alt="Token Launch Advisory"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                  Token Launch Advisory
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  End-to-end guidance for token generation events, distribution strategies, and market launch planning.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Mechanism Design */}
+            <Card className="bg-white border-none shadow-sm hover:shadow-lg transition-all group overflow-hidden">
+              <div className="relative w-full h-48 bg-gray-100 overflow-hidden">
+                <Image
+                  src="/Offerings/mechanism_design.png"
+                  alt="Mechanism Design"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                  Mechanism Design
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  Game-theoretic design of incentive structures, auction mechanisms, and protocol economics.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Quantitative Finance */}
+            <Card className="bg-white border-none shadow-sm hover:shadow-lg transition-all group overflow-hidden">
+              <div className="relative w-full h-48 bg-gray-100 overflow-hidden">
+                <Image
+                  src="/Offerings/quant.png"
+                  alt="Quantitative Finance"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                  Quantitative Finance
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  Mathematical modeling, risk analysis, and financial engineering for DeFi protocols and token systems.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Economic Modeling */}
+            <Card className="bg-white border-none shadow-sm hover:shadow-lg transition-all group overflow-hidden">
+              <div className="relative w-full h-48 bg-gray-100 overflow-hidden">
+                <Image
+                  src="/Offerings/economic_modeling.png"
+                  alt="Economic Modeling"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                  Economic Modeling
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  Agent-based simulations and dynamic modeling to predict system behavior and optimize token economics.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Blockchain Advisory */}
+            <Card className="bg-white border-none shadow-sm hover:shadow-lg transition-all group overflow-hidden">
+              <div className="relative w-full h-48 bg-gray-100 overflow-hidden">
+                <Image
+                  src="/Offerings/blockchain.png"
+                  alt="Blockchain Advisory"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                  Blockchain Advisory
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  Strategic consultation on blockchain architecture, platform selection, and technical implementation.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Machine Learning and AI Development */}
+            <Card className="bg-white border-none shadow-sm hover:shadow-lg transition-all group overflow-hidden">
+              <div className="relative w-full h-48 bg-gray-100 overflow-hidden">
+                <Image
+                  src="/Offerings/machine_learning.png"
+                  alt="Machine Learning and AI Development"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                  Machine Learning & AI Development
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  AI-powered analytics, predictive modeling, and automated optimization for tokenomic systems.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* AI Agent Development */}
+            <Card className="bg-white border-none shadow-sm hover:shadow-lg transition-all group overflow-hidden">
+              <div className="relative w-full h-48 bg-gray-100 overflow-hidden">
+                <Image
+                  src="/Offerings/agent_development.png"
+                  alt="AI Agent Development"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                  AI Agent Development
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  Custom autonomous agents for protocol interaction, market making, and decentralized system optimization.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
