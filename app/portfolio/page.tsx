@@ -6,6 +6,22 @@ import { Card, CardContent } from "@/components/ui/card"
 
 const clients = [
   {
+    name: "Gaia AI",
+    url: "https://gaiaai.xyz/",
+    description: "A decentralized AI infrastructure enabling users to create, deploy, and monetize customized AI agents, combining blockchain technology with artificial intelligence to address privacy risks and censorship concerns in centralized AI services.",
+    year: "2025",
+    tags: ["AI", "Infrastructure", "Decentralized"],
+    image: "/clients/GAIAAI.jpg",
+  },
+  {
+    name: "The Bonding Curve Research Group",
+    url: "https://bondingcurve.tech/",
+    description: "An independent, decentralized collective of engineers, researchers, and data analysts studying and implementing bonding curves as programmable financial tools, creating open-source tooling and publishing research to advance Web3 crypto-economic primitives.",
+    year: "2025",
+    tags: ["Research", "Token Engineering", "DeFi"],
+    image: "/clients/BCRG.png",
+  },
+  {
     name: "Avalanche",
     url: "https://www.avax.network/",
     description: "A blockchain network that enables builders to create applications and custom Layer 1 blockchains with lightning-fast transaction finality and scalability, powering a global community developing real-world use cases across DeFi, gaming, and institutional finance.",
@@ -46,10 +62,18 @@ const clients = [
     image: "/clients/ASYMMETRY-FINANCE.png",
   },
   {
+    name: "Inverter Network",
+    url: "https://www.inverter.network/",
+    description: "A pioneering Web3 protocol for token economies enabling conditional token issuance, dynamic utility management and token distribution through modular, plug-and-play smart contract modules.",
+    year: "2022",
+    tags: ["Token Engineering", "Infrastructure", "Protocol"],
+    image: "/clients/INVERTER.png",
+  },
+  {
     name: "fx.land",
     url: "https://fx.land/",
     description: "The first DePIN blockchain platform for decentralized data storage where users can own their data through FxBlox hardware, earn cryptocurrency rewards, and participate in a decentralized storage network.",
-    year: "2023",
+    year: "2022",
     tags: ["DePIN", "Storage", "Infrastructure"],
     image: "/clients/FUCNTIONLAND.png",
   },
@@ -57,17 +81,9 @@ const clients = [
     name: "Wooshi World",
     url: "https://www.wooshi.world/",
     description: "A brand featuring rubbery fun lovin' Wooshis designed to spread positivity, offering characters, video content, and merchandise including toys and coloring books.",
-    year: "2023",
+    year: "2022",
     tags: ["NFT", "Entertainment", "Brand"],
     image: "/clients/WOOSHI-WORLD.png",
-  },
-  {
-    name: "Future Thinkers",
-    url: "https://futurethinkers.org/",
-    description: "A media and education platform helping people wake up, evolve, and adapt to the changing world through podcasts, courses, community events, and an experimental regenerative village project.",
-    year: "2022",
-    tags: ["Education", "Media", "Community"],
-    image: "/clients/FUTURE_THINKERS.png",
   },
   {
     name: "NVAL",
@@ -84,6 +100,14 @@ const clients = [
     year: "2022",
     tags: ["Education", "Research", "Tokenomics"],
     image: "/clients/TOKENENGINEERING.png",
+  },
+  {
+    name: "Future Thinkers",
+    url: "https://futurethinkers.org/",
+    description: "A media and education platform helping people wake up, evolve, and adapt to the changing world through podcasts, courses, community events, and an experimental regenerative village project.",
+    year: "2021",
+    tags: ["Education", "Media", "Community"],
+    image: "/clients/FUTURE_THINKERS.png",
   },
   {
     name: "Panther Protocol",
