@@ -2,11 +2,15 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Label } from "@/components/ui/label"
 import Image from "next/image"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { ExternalLink, Linkedin, Github, Mail } from "lucide-react"
+import { ExternalLink, Linkedin, Github, Mail, Send } from "lucide-react"
+import { useState } from "react"
 
 const offerings = [
   {
@@ -255,6 +259,184 @@ const articles = [
     image: "/earth-healing-regenerative-economy-sustainability.jpg",
   },
 ]
+
+const serviceOptions = [
+  "Data Collection & Analysis",
+  "Interactive Data Dashboards",
+  "Token Engineering Methodology",
+  "Component Validation & Parameter Tuning",
+  "Governance Advisory",
+  "NFT Campaign Advisory",
+  "Token Launch Advisory",
+  "Mechanism Design",
+  "Quantitative Finance",
+  "Economic Modeling",
+  "Blockchain Advisory",
+  "Machine Learning & AI Development",
+  "AI Agent Development",
+]
+
+function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+    services: [] as string[],
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+
+  const handleServiceToggle = (service: string) => {
+    setFormData((prev) => ({
+      ...prev,
+      services: prev.services.includes(service)
+        ? prev.services.filter((s) => s !== service)
+        : [...prev.services, service],
+    }))
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus("idle")
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setSubmitStatus("success")
+      } else {
+        setSubmitStatus("error")
+      }
+    } catch (error) {
+      console.error("Form submission error:", error)
+      setSubmitStatus("error")
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  return (
+    <section id="contact" className="px-6 py-20 bg-gray-50">
+      <div className="max-w-3xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Let's Build the Future Together</h2>
+          <p className="text-lg text-gray-600">
+            Interested in token engineering, regenerative finance, or collaborating on innovative Web3 projects? Get in
+            touch with us.
+          </p>
+        </div>
+
+        <Card className="bg-white border-none shadow-lg">
+          <CardContent className="p-8">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Name Field */}
+              <div className="space-y-2">
+                <Label htmlFor="name" className="text-gray-900">
+                  Name *
+                </Label>
+                <Input
+                  id="name"
+                  type="text"
+                  placeholder="Your name"
+                  required
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                />
+              </div>
+
+              {/* Email Field */}
+              <div className="space-y-2">
+                <Label htmlFor="email" className="text-gray-900">
+                  Email Address *
+                </Label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="your.email@example.com"
+                  required
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                />
+              </div>
+
+              {/* Services Multi-Select */}
+              <div className="space-y-2">
+                <Label className="text-gray-900">Services Interested In</Label>
+                <p className="text-sm text-gray-500 mb-3">Select all that apply</p>
+                <div className="max-h-60 overflow-y-auto border border-gray-300 rounded-md p-4 space-y-2">
+                  {serviceOptions.map((service) => (
+                    <label key={service} className="flex items-center space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                      <input
+                        type="checkbox"
+                        checked={formData.services.includes(service)}
+                        onChange={() => handleServiceToggle(service)}
+                        className="w-4 h-4 text-orange-500 border-gray-300 rounded focus:ring-orange-500 focus:ring-2"
+                      />
+                      <span className="text-sm text-gray-700">{service}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              {/* Message Field */}
+              <div className="space-y-2">
+                <Label htmlFor="message" className="text-gray-900">
+                  Message *
+                </Label>
+                <Textarea
+                  id="message"
+                  placeholder="Tell us about your project or inquiry..."
+                  required
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  className="min-h-[150px]"
+                />
+              </div>
+
+              {/* Submit Button */}
+              <div className="pt-4">
+                <Button
+                  type="submit"
+                  size="lg"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#FF6B35] hover:bg-[#E55A2B] text-white rounded-full"
+                >
+                  {isSubmitting ? (
+                    "Sending..."
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4 mr-2" />
+                      Send Message
+                    </>
+                  )}
+                </Button>
+              </div>
+
+              {/* Status Messages */}
+              {submitStatus === "success" && (
+                <div className="text-center text-green-600 font-medium">
+                  Thank you! Your message has been sent successfully.
+                </div>
+              )}
+              {submitStatus === "error" && (
+                <div className="text-center text-red-600 font-medium">
+                  Something went wrong. Please try again or email us directly at shawn@longtailfinancial.com
+                </div>
+              )}
+            </form>
+          </CardContent>
+        </Card>
+      </div>
+    </section>
+  )
+}
 
 export default function Home() {
   return (
@@ -517,20 +699,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="px-6 py-20 bg-gray-50">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Let's Build the Future Together</h2>
-          <p className="text-lg text-gray-600 mb-8">
-            Interested in token engineering, regenerative finance, or collaborating on innovative Web3 projects?
-          </p>
-          <Link href="mailto:contact@longtailfinancial.com">
-            <Button size="lg" className="bg-[#FF6B35] hover:bg-[#E55A2B] text-white rounded-full">
-              <Mail className="w-4 h-4 mr-2" />
-              Get in Touch
-            </Button>
-          </Link>
-        </div>
-      </section>
+      <ContactSection />
 
       <Footer />
     </div>
