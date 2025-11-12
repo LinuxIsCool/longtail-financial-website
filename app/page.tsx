@@ -667,13 +667,6 @@ export default function Home() {
                 </p>
 
                 <p>
-                  As a Data Scientist at RBC Amplify, Shawn led the development of Bundle, an award-winning internal
-                  solution leveraging machine learning for access management. His academic research includes deep
-                  reinforcement learning for portfolio management, cryptocurrency market visualization, and distributed
-                  multi-agent learning systems.
-                </p>
-
-                <p>
                   Shawn is passionate about using blockchain technology and token engineering to address climate change
                   and build regenerative economic systems. He has authored numerous articles on topics including Nature
                   2.0, Solarpunk frameworks for carbon neutrality, and the role of DAOs in human collaboration.
